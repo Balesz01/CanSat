@@ -9,9 +9,6 @@
 }
 
 /* Navbarhoz tartozó stylok*/
-.navbar {
-    font-size: 25px;
-}
 #navbar-container{
     padding-left: 10%;
     padding-right: 10%;
@@ -50,19 +47,23 @@ nav h2{
   filter: drop-shadow(0 0 14px rgba(80, 180, 255, 0.45));
 }
 .navbar {
-  backdrop-filter: blur(6px);
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.45),
-    rgba(0, 0, 0, 0)
-  );
+    position: fixed;
+    width: 100%;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    z-index: 1000;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0)
+    );
 }
 /*bodyhoz*/
 body {
-      background-image: url(../Img/Bg1.jpeg);
       background-size: cover;
       color: #f5f5f5;
-      padding-bottom: 150px;
       font-size: 20px;
 }
 
@@ -76,12 +77,68 @@ body {
 #logo{
     width: 100px;
 }
+/*buttonok/gombok*/
+
+/*Keret / kártya*/
+
+/*Herok*/
+.hero{
+  height: 80vh;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-align: left;
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  position: relative;
+}
+.hero h1 {
+  font-size: 4rem;
+  margin-left: 10%;
+  margin-bottom: 4%;
+  color: white;
+}
+.herobutton{
+  border: solid white 1px;
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 23px;
+  color: white;
+  text-decoration: none;
+}
+.hero1 { 
+  background-image: url(../Img/Bg1.jpeg); 
+}
+.hero2{
+  background-image: url(../Img/Forraszós_kép1.jpg);
+}
+/*Hero utáni tartalmi rész*/
+.content {
+  padding: 80px 20px;
+  background: #111;   /* sötét háttér */
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
 
 /*Footerhez tartozó style*/
 footer{
 }
 .fixed-footer {
-    position: fixed !important;
+    position: static;
     bottom: 0 !important;
     left: 0 !important;
     right: 0 !important;
