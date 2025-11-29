@@ -26,7 +26,7 @@
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #17a7d2; /* tetszőleges szín */
+  background-color: #17a7d2;
   transition: width 0.3s;
 }
 
@@ -47,16 +47,16 @@ nav h2{
   filter: drop-shadow(0 0 14px rgba(80, 180, 255, 0.45));
 }
 .navbar {
-    position: fixed;
+    position: absolute;
     width: 100%;
     padding: 20px;
     top: 0;
     left: 0;
     font-size: 25px;
-    z-index: 1000;
+    z-index: 50;
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.65),
       rgba(0, 0, 0, 0)
     );
 }
@@ -98,42 +98,52 @@ body {
 .hero h1 {
   font-size: 4rem;
   margin-left: 10%;
-  margin-bottom: 4%;
   color: white;
 }
 .herobutton{
   border: solid white 1px;
   border-radius: 10px;
   padding: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
   font-size: 23px;
   color: white;
   text-decoration: none;
 }
+.herobutton:hover{
+  background-color: white;
+  color: black;
+  transition: background-color 0.5s, color 0.5s;
+  filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.45));
+}
+
 .hero1 { 
-  background-image: url(../Img/Bg1.jpeg); 
+  background-image: url(../Img/Bg1.jpeg);
 }
 .hero2{
   background-image: url(../Img/Forraszós_kép1.jpg);
 }
+
 /*Hero utáni tartalmi rész*/
 .content {
   padding: 80px 20px;
-  background: #111;   /* sötét háttér */
+  background: #111;
+  text-align: center;
+  align-items: center;
+}
+.content p {
+  max-width: 900px;
+  display: flex;
+  text-align: left;
+}
+.contentcim{
+  font-size: 35px;
+  display: flex;
+  padding-right: 5%;
+  justify-content: end;
+  align-items: start;
   text-align: center;
 }
-
-.content h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.content p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 1.2rem;
-  line-height: 1.6;
-}
-
 /*Footerhez tartozó style*/
 footer{
 }
