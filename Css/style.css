@@ -1,17 +1,79 @@
 @media (max-width: 575.98px) {
-    .pl-xs-25px {
-      padding-left: 25px !important;
-    }
-    .my-xs-40px {
+  .pl-xs-25px {
+    padding-left: 25px !important;
+  }
+  .my-xs-40px {
     margin-left: 40px !important;
     margin-right: 40px !important;
-}
+  }
 }
 
-/* Navbarhoz tartozó stylok*/
-#navbar-container{
-    padding-left: 10%;
-    padding-right: 10%;
+/*Mobilok*/
+@media (max-width: 430px) {
+
+  .custom-navbar {
+    padding: 8px 0 !important;
+    backdrop-filter: blur(8px);
+  }
+
+  #navbar-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-logo {
+    width: 48px !important;
+  }
+
+  .mobile-brand {
+    font-size: 20px !important;
+  }
+
+ .navbar-toggler {
+    padding: 6px 8px !important;
+    transform: scale(0.9);
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 40px !important;  
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .hero {
+    padding-top: 120px !important;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem !important;
+    line-height: 1.25 !important;
+  }
+}
+
+
+/* NAVBAR */
+#navbar-container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.custom-navbar {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0)
+  );
+  z-index: 50;
+}
+
+.navbar-collapse {
+  width: 100%;
 }
 .nav-link {
   position: relative;
@@ -37,52 +99,28 @@
 .nav-link:hover {
   color: #17a7d2;
 }
-nav li{
-    margin-left: 10px;
-}
-nav h2{
+
+.brand-title {
   font-size: 35px;
 }
+
 .logo-kiemeles {
   filter: drop-shadow(0 0 14px rgba(80, 180, 255, 0.45));
 }
-.navbar {
-    position: absolute;
-    width: 100%;
-    padding: 20px;
-    top: 0;
-    left: 0;
-    font-size: 25px;
-    z-index: 50;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.65),
-      rgba(0, 0, 0, 0)
-    );
+
+#logo {
+  width: 100px;
 }
-/*bodyhoz*/
+
+/* BODY */
 body {
-      background-size: cover;
-      color: #f5f5f5;
-      font-size: 20px;
+  background-size: cover;
+  color: #f5f5f5;
+  font-size: 20px;
 }
 
-.section-title {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-      font-weight: bold;
-      font-size: 2rem;
-}
-#logo{
-    width: 100px;
-}
-/*buttonok/gombok*/
-
-/*Keret / kártya*/
-
-/*Herok*/
-.hero{
+/* HERO */
+.hero {
   height: 80vh;
   display: flex;
   justify-content: start;
@@ -92,80 +130,70 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-
-  position: relative;
 }
+
 .hero h1 {
   font-size: 4rem;
   margin-left: 10%;
   color: white;
 }
-.herobutton{
+
+.herobutton {
   border: solid white 1px;
   border-radius: 10px;
-  padding: 8px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 8px 15px;
   font-size: 23px;
   color: white;
   text-decoration: none;
 }
-.herobutton:hover{
+
+.herobutton:hover {
   background-color: white;
   color: black;
   transition: background-color 0.5s, color 0.5s;
   filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.45));
 }
 
-.hero1 { 
+.hero1 {
   background-image: url(../Img/Bg1.jpeg);
 }
-.hero2{
+
+.hero2 {
   background-image: url(../Img/Forraszós_kép1.jpg);
 }
 
-/*Hero utáni tartalmi rész*/
+/* CONTENT */
 .content {
   padding: 80px 20px;
   background: #111;
   text-align: center;
-  align-items: center;
 }
+
 .content p {
   max-width: 900px;
-  display: flex;
+  margin: 0 auto;
   text-align: left;
 }
-.contentcim{
+
+.contentcim {
   font-size: 35px;
   display: flex;
-  padding-right: 5%;
   justify-content: end;
-  align-items: start;
-  text-align: center;
+  padding-right: 5%;
 }
-/*Footerhez tartozó style*/
-footer{
+
+/* FOOTER */
+#footer-container {
+  padding-left: 10%;
+  padding-right: 10%;
 }
-.fixed-footer {
-    position: static;
-    bottom: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    z-index: 9999 !important;
+
+.footer-link {
+  text-decoration: none;
+  color: white;
 }
-#footer-container{
-    padding-left: 10%;
-    padding-right: 10%;
-}
-.footer-link{
-    text-decoration: none;
-    color: white;
-}
-.footer-link:hover{
-    color: #328be3;
-    text-decoration: underline;
-    height: 5px;
-    transition: width 0.3s;
+
+.footer-link:hover {
+  color: #328be3;
+  text-decoration: underline;
 }
