@@ -48,11 +48,76 @@
   }
 
   .hero h1 {
-    font-size: 2.2rem !important;
+    font-size: 2rem !important;
     line-height: 1.25 !important;
+  }
+
+ .content{
+  padding: 60px 20px !important;
+ }
+
+  .contentcim{
+    justify-content: center !important;
+  }
+  .content p {
+    text-align: center !important;
+    padding: 0 !important;
+    max-width: 100%;  
   }
 }
 
+/* Nagyobb mobilok + kisebb tabletek – 430–768px */
+@media (min-width: 430px) and (max-width: 768px) {
+
+  .custom-navbar {
+    padding: 12px 0 !important;
+  }
+
+  #navbar-container {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  .mobile-logo {
+    width: 60px !important;
+  }
+
+  .mobile-brand {
+    font-size: 24px !important;
+  }
+
+  .navbar-toggler {
+    padding: 8px 10px !important;
+    transform: scale(1);
+    height: 42px !important;
+  }
+
+  .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center !important; /* ez hozza középre függőlegesen */
+      height: 100vh;
+  }
+
+  .hero h1 {
+    font-size: 2.4rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .content {
+    padding: 70px 40px !important;
+  }
+
+  .contentcim {
+    justify-content: center !important;
+  }
+
+  .content p {
+    text-align: center !important;
+    padding: 0 !important;
+    max-width: 100%;
+  }
+}
 
 /* NAVBAR */
 #navbar-container {
@@ -121,7 +186,6 @@ body {
 
 /* HERO */
 .hero {
-  margin-top: auto; 
   margin-bottom: auto;  
   display: flex;
   flex-direction: column;
