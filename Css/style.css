@@ -118,6 +118,69 @@
     max-width: 100%;
   }
 }
+/* Laptop/desktop – 769px és feljebb */
+@media (min-width: 769px) and (max-width: 991px) {
+
+  .custom-navbar {
+    padding: 20px 0 !important; /* nagyobb navbar padding */
+  }
+
+  #navbar-container {
+    padding-left: 10% !important;
+    padding-right: 10% !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-logo {
+    width: 100px !important;   /* nagyobb logó */
+  }
+
+  .mobile-brand {
+    font-size: 35px !important; /* nagyobb brand cím */
+  }
+
+  .navbar-toggler {
+    padding: 10px 12px !important;
+    transform: scale(1);
+    height: 50px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important; /* függőlegesen középre */
+    height: 80vh;                        /* hero1 80vh a nagy képernyőn */
+  }
+
+  .hero h1 {
+    font-size: 3rem !important;          /* nagyobb szöveg */
+    line-height: 1.2 !important;
+  }
+
+  .herobutton {
+    font-size: 1.5rem !important;
+    padding: 12px 25px !important;
+  }
+
+  .content {
+    padding: 50px 40px !important;
+  }
+
+  .contentcim {
+    justify-content: center !important;
+  }
+
+  .content p {
+    text-align: center !important;
+    padding: 0 !important;
+    max-width: 100%;
+  }
+}
 
 /* NAVBAR */
 #navbar-container {
