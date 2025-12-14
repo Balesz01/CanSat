@@ -174,6 +174,64 @@ body {
   font-size: 20px;
 }
 
+/* --- CSAPAT SZEKCIÓ STÍLUSOK --- */
+/* Ha a hero1 a fő háttérkép, biztosítjuk, hogy kitöltse a teret */
+.hero1 {
+    min-height: 100vh;
+    background-image: url('../Img/rolunkbg.jpeg'); /* Ide írd be a pontos háttérkép útvonalat */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax hatás */
+}
+
+.team-card {
+    background: rgba(20, 20, 35, 0.75); 
+    backdrop-filter: blur(12px);       
+    border: 1px solid rgba(23, 167, 210, 0.3);
+    border-radius: 20px; /* Kicsit kerekebb sarkok */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    /* Opcionális: minimális magasság, hogy jó nagy legyen */
+    min-height: 450px; 
+}
+
+.team-card:hover {
+    transform: translateY(-15px); /* Nagyobb mozgás */
+    box-shadow: 0 15px 40px rgba(23, 167, 210, 0.5);
+    border-color: #17a7d2;
+}
+
+/* NAGYOBB PROFILKÉP */
+.profile-img {
+    width: 180px;  /* 140px-ről növelve */
+    height: 180px; /* 140px-ről növelve */
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #17a7d2; /* Vastagabb keret */
+    padding: 5px;
+    background-color: rgba(255,255,255,0.05);
+    transition: all 0.3s ease;
+}
+
+.team-card:hover .profile-img {
+    box-shadow: 0 0 25px #17a7d2; /* Erősebb ragyogás */
+    transform: scale(1.05); /* Kicsit ráközelít a képre */
+}
+
+.role-text {
+    color: #17a7d2;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.1rem; /* Nagyobb betű */
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.card-text {
+    color: #ddd;
+    line-height: 1.8; /* Szellősebb sorköz */
+    font-size: 1.1rem; /* Olvashatóbb méret */
+}
 /* FOOTER */
 #footer-container {
   padding-left: 10%;
