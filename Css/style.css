@@ -473,7 +473,6 @@ body {
 }
 
 .contact-info li {
-  display: flex;
   align-items: start;
 }
 
