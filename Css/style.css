@@ -46,10 +46,19 @@
     margin-bottom: auto;
   }
 
+  /* --- JAVÍTÁS: Hero szöveg középre igazítása mobilon --- */
+  .hero {
+    align-items: center !important; /* Vízszintesen középre húzza a tartalmat */
+  }
+
   .hero h1 {
     font-size: 2rem !important;
     line-height: 1.25 !important;
+    text-align: center !important; /* Szöveg középre */
+    margin-left: 0 !important;     /* Bal margó törlése */
+    padding: 0 15px;               /* Kis térköz a széleken */
   }
+  /* ----------------------------------------------------- */
 }
 
 /* Nagyobb mobilok + kisebb tabletek (430px – 768px) */
@@ -74,11 +83,14 @@
       flex-direction: column;
       justify-content: center !important;
       height: 100vh;
+      align-items: center; /* Itt is középre igazítjuk */
   }
 
   .hero h1 {
     font-size: 2.4rem !important;
     line-height: 1.3 !important;
+    text-align: center;
+    margin-left: 0 !important;
   }
   
   /* Mobilon a hero2 (forrasztós kép) beállítása */
@@ -223,21 +235,24 @@ body {
 }
 
 /* ========================================= */
-/* 4. HERO 1 (Kezdőkép)                     */
+/* 4. HERO 1 (Kezdőkép JAVÍTVA)             */
 /* ========================================= */
 
 .hero {
-  margin-bottom: auto;  
+  /* --- JAVÍTÁS: Ez biztosítja a vertikális középre igazítást --- */
+  flex-grow: 1; /* Kitölti a rendelkezésre álló helyet */
   display: flex;
-  margin-top: auto;
   flex-direction: column;
-  justify-content: center !important;  
+  justify-content: center; /* Függőlegesen középre */
+  margin: 0; /* Auto margin törlése */
+  /* ----------------------------------------------------------- */
 }
 
 .hero h1 {
   font-size: 4rem;
   margin-left: 10%;
   color: white;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
 }
 
 .herobutton {
@@ -249,6 +264,7 @@ body {
   text-decoration: none;
   display: inline-block;
   margin-top: 15px;
+  /* Ha középre kell, ezt is állítani kell mobilon, lásd media query */
 }
 
 .herobutton:hover {
@@ -260,8 +276,8 @@ body {
 
 /* PARALLAX 1 HÁTTÉR */
 .hero1 {
-  height: 80vh;       
-  background-image: url(../Img/Bg1.jpeg); /* Ellenőrizd a kép nevét! */
+  height: 100vh; /* --- JAVÍTÁS: Teljes képernyő magasság --- */     
+  background-image: url(../Img/Bg1.jpeg); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -418,7 +434,7 @@ body {
 }
 
 /* ========================================= */
-/* 7. MODERN FOOTER                         */
+/* 7. MODERN FOOTER (JAVÍTVA)               */
 /* ========================================= */
 .custom-footer {
     position: relative;
@@ -432,10 +448,20 @@ body {
   font-size: 0.95rem;
 }
 
+/* --- JAVÍTÁS: Reszponzív Footer Szélesség --- */
 .modern-footer .container {
-  max-width: 70% !important; /* Itt állíthatod, mennyire legyen széles (pl. 85%, 95%) */
-  width: 70% !important;     /* Biztonsági beállítás, hogy biztosan alkalmazza */
+  width: 100%;       /* Mobilon teljes szélesség */
+  max-width: 100%;
 }
+
+/* Nagyobb képernyőn (Laptop/PC) legyen 90%-os (széles) */
+@media (min-width: 992px) {
+  .modern-footer .container {
+    max-width: 90% !important; 
+    width: 90% !important;
+  }
+}
+/* ------------------------------------------- */
 
 .footer-logo {
   width: 50px;
