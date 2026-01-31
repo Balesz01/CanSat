@@ -1,3 +1,5 @@
+/* style.css */
+
 @media (max-width: 575.98px) {
   .pl-xs-25px {
     padding-left: 25px !important;
@@ -113,7 +115,15 @@
     padding: 0 !important;
     max-width: 100%;
   }
+  .bem-grid{
+    grid-template-columns: 1fr;
+  }
+  .bem-card{
+    text-align: left;
+  }
+
 }
+
 /* Laptop/desktop – 769px és feljebb */
 @media (min-width: 769px) and (max-width: 991px) {
 
@@ -280,6 +290,7 @@ body {
   filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.45));
 }
 
+/* PARALLAX 1 (Hero1) – marad az eredeti méreted */
 .hero1 {
   height: 80vh;       
   background-image: url(../Img/Bg1.jpeg);
@@ -291,11 +302,16 @@ body {
   flex-direction: column;     
 }
 
+/* PARALLAX 2 (Hero2) */
 .hero2 {
+  height: 65vh; /* ha ugyanakkorát akarsz mint hero1: írd 80vh-ra */
   background-image: url(../Img/Forraszós_kép1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-/* CONTENT */
+/* CONTENT – marad a te fekete bemutatkozásod */
 .content {
   padding: 80px 20px;
   background: #111;
@@ -312,10 +328,37 @@ body {
   font-size: 35px;
   display: flex;
   justify-content: end;
+
+  height: 100%;
   padding-right: 5%;
 }
 
-/* FOOTER */
+.bem-grid{
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.bem-card{
+  background: #0e0e0e;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 18px 18px;
+  text-align: left;
+}
+
+.bem-card h3{
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.bem-card ul{
+  margin: 0;
+  padding-left: 18px;
+}
+
+/* FOOTER – marad a te eredeti footered */
 #footer-container {
   padding-left: 10%;
   padding-right: 10%;
@@ -329,4 +372,25 @@ body {
 .footer-link:hover {
   color: #328be3;
   text-decoration: underline;
+}
+/* ====== CSAK EZ AZ ÚJ RÉSZ A “CSÚSZÁS” MIATT ====== */
+
+/* ne legyen alap margó, ami fehér csíkot csinál */
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+/* a bemutatkozás “bemenjen” a hero1 képbe (ettől nem lesz üres/fehér rész felül) */
+.content-pushup{
+  margin-top: -120px;   /* ha sok: -80px, ha kevés: -160px */
+  position: relative;
+  z-index: 5;
+}
+
+/* a footer “bemenjen” a hero2 képbe */
+.footer-pushup{
+  margin-top: -120px;   /* állítható ugyanúgy */
+  position: relative;
+  z-index: 5;
 }
