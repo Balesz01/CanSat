@@ -1,557 +1,568 @@
 /* ========================================= */
-/* 1. MEDIA QUERIES (Reszponzivitás)        */
-/* ========================================= */
-
-@media (max-width: 575.98px) {
-  .pl-xs-25px {
-    padding-left: 25px !important;
-  }
-  .my-xs-40px {
-    margin-left: 40px !important;
-    margin-right: 40px !important;
-  }
-}
-
-/* Mobilok (extra kicsi) */
-@media (max-width: 430px) {
-  .custom-navbar {
-    padding: 8px 0 !important;
-    backdrop-filter: blur(8px);
-  }
-
-  #navbar-container {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .mobile-logo {
-    width: 48px !important;
-  }
-
-  .mobile-brand {
-    font-size: 20px !important;
-  }
-
-  .navbar-toggler {
-    padding: 6px 8px !important;
-    transform: scale(0.9);
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    height: 40px !important;  
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-
-  /* --- JAVÍTÁS: Hero szöveg középre igazítása mobilon --- */
-  .hero {
-    align-items: center !important; /* Vízszintesen középre húzza a tartalmat */
-  }
-
-  .hero h1 {
-    font-size: 2rem !important;
-    line-height: 1.25 !important;
-    text-align: center !important; /* Szöveg középre */
-    margin-left: 0 !important;     /* Bal margó törlése */
-    padding: 0 15px;               /* Kis térköz a széleken */
-  }
-  /* ----------------------------------------------------- */
-}
-
-/* Nagyobb mobilok + kisebb tabletek (430px – 768px) */
-@media (min-width: 430px) and (max-width: 768px) {
-  .custom-navbar {
-    padding: 12px 0 !important;
-  }
-
-  #navbar-container {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
-  }
-
-  .navbar-toggler {
-    padding: 8px 10px !important;
-    transform: scale(1);
-    height: 42px !important;
-  }
-
-  .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center !important;
-      height: 100vh;
-      align-items: center; /* Itt is középre igazítjuk */
-  }
-
-  .hero h1 {
-    font-size: 2.4rem !important;
-    line-height: 1.3 !important;
-    text-align: center;
-    margin-left: 0 !important;
-  }
-  
-  /* Mobilon a hero2 (forrasztós kép) beállítása */
-  .hero2 {
-    background-attachment: scroll !important;
-    height: 50vh !important;
-  }
-  
-  .hero2 h2 {
-    font-size: 2rem !important;
-  }
-  
-  .hero2 p {
-    font-size: 1.1rem !important;
-  }
-}
-
-/* Laptop/Desktop (769px – 991px) */
-@media (min-width: 769px) and (max-width: 991px) {
-  .custom-navbar {
-    padding: 20px 0 !important;
-    font-size: 1.3rem;
-  }
-  .nav-item {
-    font-size: 25px;
-    font-weight: 500;
-  }
-
-  #navbar-container {
-    padding-left: 10% !important;
-    padding-right: 10% !important;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .navbar-toggler {
-    padding: 10px 12px !important;
-    transform: scale(1);
-    height: 50px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center !important;
-    height: 80vh;
-  }
-
-  .hero h1 {
-    font-size: 3rem !important;
-    line-height: 1.2 !important;
-  }
-
-  .herobutton {
-    font-size: 1.5rem !important;
-    padding: 12px 25px !important;
-  }
-}
-
-/* ========================================= */
-/* 2. NAVBAR (Fejléc)                       */
-/* ========================================= */
-
-#navbar-container {
-  padding-left: 10%;
-  padding-right: 10%;
-}
-
-.custom-navbar {
-  position: relative;
-  width: 100%;
-  padding: 20px 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.65),
-    rgba(0, 0, 0, 0)
-  );
-  z-index: 50;
-}
-
-.navbar-collapse {
-  width: 100%;
-}
-
-.nav-link {
-  position: relative;
-  color: #fff;
-  transition: color 0.3s;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #17a7d2;
-  transition: width 0.3s;
-}
-
-.nav-link:hover::after {
-  width: 100%;
-}
-
-.nav-link:hover {
-  color: #17a7d2;
-}
-
-.brand-title {
-  font-size: 35px;
-}
-
-.logo-kiemeles {
-  filter: drop-shadow(0 0 14px rgba(80, 180, 255, 0.45));
-}
-
-#logo {
-  width: 100px;
-}
-
-/* ========================================= */
-/* 3. ALAP BEÁLLÍTÁSOK (Body)               */
+/* 1. ALAP BEÁLLÍTÁSOK (Global & Reset)      */
 /* ========================================= */
 
 html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body {
-  background-size: cover;
-  color: #f5f5f5;
-  font-size: 20px;
-  background-color: #0e0e0e; 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0e0e0e;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 /* ========================================= */
-/* 4. HERO 1 (Kezdőkép JAVÍTVA)             */
+/* 2. NAVBAR (Fejléc menü)                   */
 /* ========================================= */
 
-.hero {
-  /* --- JAVÍTÁS: Ez biztosítja a vertikális középre igazítást --- */
-  flex-grow: 1; /* Kitölti a rendelkezésre álló helyet */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Függőlegesen középre */
-  margin: 0; /* Auto margin törlése */
-  /* ----------------------------------------------------------- */
+#navbar-container {
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
-.hero h1 {
-  font-size: 4rem;
-  margin-left: 10%;
-  color: white;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
-}
-
-.herobutton {
-  border: solid white 1px;
-  border-radius: 10px;
-  padding: 8px 15px;
-  font-size: 23px;
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 15px;
-  /* Ha középre kell, ezt is állítani kell mobilon, lásd media query */
-}
-
-.herobutton:hover {
-  background-color: white;
-  color: black;
-  transition: background-color 0.5s, color 0.5s;
-  filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.45));
-}
-
-/* PARALLAX 1 HÁTTÉR */
-.hero1 {
-  height: 100vh; /* --- JAVÍTÁS: Teljes képernyő magasság --- */     
-  background-image: url(../Img/Bg1.jpeg); 
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column;     
-}
-
-/* ========================================= */
-/* 5. BEMUTATKOZÁS (Clean / No Box)         */
-/* ========================================= */
-
-.content {
-  /* Sötét háttér enyhe átmenettel */
-  background: linear-gradient(to bottom, #0e0e0e, #1a1a1a);
-  color: #ddd;
-  padding: 100px 20px;
-  text-align: left;
-}
-
-/* Cím középre igazítva */
-.simple-title {
-  font-size: 3rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-  margin-bottom: 15px;
-  letter-spacing: 2px;
-}
-
-/* Díszítő vonal a cím alatt */
-.title-underline {
-  width: 50px;
-  height: 3px;
-  background-color: #17a7d2; /* Brand kék szín */
-  margin: 0 auto 30px auto;
-}
-
-/* Bevezető szöveg */
-.simple-lead {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #aaa;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.text-blue {
-  color: #17a7d2;
-  font-weight: 600;
-}
-
-/* Kategória blokkok stílusa */
-.simple-block {
-  padding: 10px 0 10px 20px; /* Bal oldali behúzás */
-  border-left: 2px solid #333; /* Vékony szürke vonal balra */
-  transition: border-color 0.3s ease;
-  height: 100%;
-}
-
-/* Hover effektus: a vonal kék lesz */
-.simple-block:hover {
-  border-left-color: #17a7d2; 
-}
-
-.block-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 15px;
-}
-
-/* Lista stílus - tiszta szöveg */
-.simple-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.simple-list li {
-  margin-bottom: 8px;
-  color: #bbb;
-  font-size: 1rem;
-  transition: color 0.2s;
-}
-
-.simple-list li:hover {
-  color: #fff; 
-}
-
-/* Mobilos nézet igazításai */
-@media (max-width: 768px) {
-  .simple-title {
-    font-size: 2.2rem;
-  }
-  
-  .simple-block {
-    border-left: none; 
-    border-top: 1px solid #333; 
-    padding: 20px 0 0 0;
-    text-align: center; 
-  }
-  
-  .simple-block:hover {
-    border-top-color: #17a7d2;
-  }
-}
-
-/* ========================================= */
-/* 6. HERO 2 (Forrasztós kép + Szöveg)      */
-/* ========================================= */
-
-.hero2 {
-  position: relative; 
-  height: 60vh;       
-  min-height: 400px;
-  
-  background-image: url('../Img/Forraszós_kép1.jpg'); /* Ellenőrizd az útvonalat! */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-/* Sötétítő réteg és tartalom igazítás */
-.hero2-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* 60% sötétítés */
-  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.hero2 h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #fff;
-  margin-bottom: 15px;
-  letter-spacing: 2px;
-  text-shadow: 0 4px 10px rgba(0,0,0,0.8);
-}
-
-.hero2 p {
-  font-size: 1.4rem;
-  color: #ddd;
-  font-weight: 500;
-  text-shadow: 0 2px 5px rgba(0,0,0,0.8);
-}
-
-/* ========================================= */
-/* 7. MODERN FOOTER (JAVÍTVA)               */
-/* ========================================= */
-.custom-footer {
+.custom-navbar {
     position: relative;
+    width: 100%;
+    padding: 20px 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0)
+    );
+    z-index: 50;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand-title {
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+}
+
+#logo {
+    width: 100px;
+}
+
+.logo-kiemeles {
+    filter: drop-shadow(0 0 14px rgba(80, 180, 255, 0.45));
+}
+
+.nav-link {
+    position: relative;
+    color: #fff !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #17a7d2;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
 }
 
+.nav-link:hover,
+.nav-link.active {
+    color: #17a7d2 !important;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 10px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* ========================================= */
+/* 3. HERO SECTIONS (Kezdőképek)             */
+/* ========================================= */
+
+/* --- Főoldali Hero (Index.html) --- */
+.hero1 {
+    height: 100vh;
+    background-image: url('../Img/Bg1.jpeg'); /* Ellenőrizd az útvonalat! */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 100px; /* Hogy optikailag középen legyen */
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-left: 10%;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    line-height: 1.2;
+}
+
+/* --- Aloldal Hero / Page Header (Támogatók, Rólunk) --- */
+.page-header {
+    background-image: url('../Img/Forraszós_kép1.jpg'); /* Ellenőrizd az útvonalat! */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Sötétítés */
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Köztes Hero (Forrasztós kép szeparátor) --- */
+.hero2 {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    background-image: url('../Img/Forraszós_kép1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero2-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero2 h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+}
+
+.hero2 p {
+    font-size: 1.4rem;
+    color: #ddd;
+}
+
+/* ========================================= */
+/* 4. TARTALOM & TIPOGRÁFIA                  */
+/* ========================================= */
+
+.content {
+    background: linear-gradient(to bottom, #0e0e0e, #1a1a1a);
+    color: #ddd;
+    padding: 100px 20px 100px 20px;
+}
+
+/* Pushup: Főoldal (Rácsúszik a képre) */
+.content-pushup {
+    margin-top: -100px;
+    position: relative;
+    z-index: 5;
+    border-radius: 0; /* Egyenes szél */
+}
+
+/* Pushup: Aloldalak (Kerekített, rácsúszik) */
+.content-pushup-sub {
+    margin-top: -60px;
+    position: relative;
+    z-index: 5;
+    background: linear-gradient(to bottom, #0e0e0e, #1a1a1a);
+    border-radius: 20px 20px 0 0;
+    padding: 80px 20px 150px 20px; /* Nagy alsó padding a footer miatt */
+}
+
+.simple-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.title-underline {
+    width: 60px;
+    height: 4px;
+    background-color: #17a7d2;
+    margin: 0 auto 30px auto;
+}
+
+.simple-lead {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #aaa;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.block-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.text-blue {
+    color: #17a7d2;
+}
+
+/* ========================================= */
+/* 5. GOMBOK (Buttons)                       */
+/* ========================================= */
+
+.herobutton {
+    border: solid white 1px;
+    border-radius: 8px;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.herobutton:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+/* ========================================= */
+/* 6. KÁRTYÁK (Sponsors & Partners)          */
+/* ========================================= */
+
+/* --- A) Kiemelt Támogatók (Négyzetes) --- */
+.sponsor-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.sponsor-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+    border-color: #17a7d2;
+    box-shadow: 0 5px 15px rgba(23, 167, 210, 0.2);
+}
+
+.gold-sponsor {
+    height: 200px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.gold-sponsor:hover {
+    border-color: #ffd700;
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
+}
+
+/* --- B) Szakmai Partnerek (NAGY VÍZSZINTES - Large Island) --- */
+.partner-card-horizontal {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.partner-card-horizontal:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #17a7d2;
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Bal oldal: Nagy Logo */
+.partner-logo-side {
+    width: 160px;
+    min-width: 160px;
+    height: 120px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+.partner-logo-side img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+}
+
+.partner-card-horizontal:hover .partner-logo-side img {
+    filter: none;
+}
+
+/* Jobb oldal: Szöveg */
+.partner-details {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.partner-name-hor {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.partner-desc {
+    color: #bbb;
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    max-width: 95%;
+}
+
+.partner-link-sm {
+    display: inline-block;
+    color: #17a7d2;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.partner-link-sm:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+/* ========================================= */
+/* 7. FOOTER (Lábléc)                        */
+/* ========================================= */
+
+.footer-pushup {
+    margin-top: -80px;
+    position: relative;
+    z-index: 10;
+}
+
 .modern-footer {
-  background-color: #222222; /* Majdnem fekete */
-  color: #ccc;
-  padding: 80px 0 30px 0;
-  font-size: 0.95rem;
+    background-color: #222;
+    color: #ccc;
+    padding: 80px 0 30px 0;
+    font-size: 0.95rem;
 }
 
-/* --- JAVÍTÁS: Reszponzív Footer Szélesség --- */
-.modern-footer .container {
-  width: 100%;       /* Mobilon teljes szélesség */
-  max-width: 100%;
-}
-
-/* Nagyobb képernyőn (Laptop/PC) legyen 90%-os (széles) */
 @media (min-width: 992px) {
-  .modern-footer .container {
-    max-width: 90% !important; 
-    width: 90% !important;
-  }
-}
-/* ------------------------------------------- */
-
-.footer-logo {
-  width: 50px;
+    .modern-footer .container {
+        max-width: 90% !important;
+        width: 90% !important;
+    }
 }
 
 .footer-brand:hover .footer-logo {
-  filter: none;
+    filter: none;
 }
 
-.footer-brand {
-  text-decoration: none;
+.footer-logo {
+    width: 50px;
 }
 
 .footer-heading {
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  font-size: 1.1rem;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
 }
 
 .footer-links li {
-  margin-bottom: 12px;
+    margin-bottom: 12px;
 }
 
 .footer-links a {
-  color: #aaa;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
+    color: #aaa;
+    transition: all 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #17a7d2;
-  transform: translateX(5px);
+    color: #17a7d2;
+    padding-left: 5px;
 }
 
-.contact-info li {
-  align-items: start;
-}
-
-.contact-info i {
-  margin-top: 5px;
-}
-
-/* Social Ikonok */
 .social-icons {
-  display: flex;
-  gap: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
 .social-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.05);
-  color: #fff;
-  border-radius: 50%;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
 }
 
 .social-btn:hover {
-  background-color: #17a7d2;
-  color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(23, 167, 210, 0.3);
+    background-color: #17a7d2;
+    transform: translateY(-3px);
 }
 
 .footer-bottom {
-  border-color: rgba(255, 255, 255, 0.1) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* ========================================= */
-/* 8. PUSHUP EFFEKTEK (Eltolások)           */
+/* 8. MEDIA QUERIES (Reszponzivitás)         */
 /* ========================================= */
 
-/* A tartalom rácsúszik a felső képre */
-.content-pushup {
-  margin-top: -100px;
-  position: relative;
-  z-index: 5;
+/* --- MOBIL (Max 576px) --- */
+@media (max-width: 576px) {
+    
+    /* Navbar Mobil */
+    .custom-navbar {
+        padding: 10px 0;
+        background: rgba(0,0,0,0.9); /* Sötétebb háttér mobilon */
+    }
+
+    #navbar-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .brand-title {
+        font-size: 24px;
+    }
+
+    #logo {
+        width: 50px;
+    }
+
+    .navbar-toggler {
+        padding: 5px;
+    }
+
+    /* Hero Mobil */
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-left: 0;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .hero {
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    
+    .simple-title {
+        font-size: 2rem;
+    }
+
+    /* Partner Kártya Mobil */
+    .partner-card-horizontal {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .partner-logo-side {
+        margin-right: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 180px;
+    }
+    
+    .partner-details {
+        text-align: center;
+    }
 }
 
-/* A footer rácsúszik az alsó képre */
-.footer-pushup {
-  margin-top: -80px; /* Footer specifikus eltolás */
-  position: relative;
-  z-index: 10;
-  box-shadow: 0 -10px 30px rgba(0,0,0,0.5); 
+/* --- TABLET (Max 991px) --- */
+@media (max-width: 991px) {
+    .nav-item {
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    .hero2 {
+        background-attachment: scroll; /* Mobilon jobb teljesítmény */
+        height: auto;
+        padding: 100px 0;
+    }
 }
