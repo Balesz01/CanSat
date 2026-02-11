@@ -210,6 +210,11 @@ ul {
 /* 4. TARTALOM & TIPOGRÁFIA                  */
 /* ========================================= */
 
+.content1 {
+    color: #ddd;
+    padding: 100px 20px 100px 20px;
+}
+
 .content {
     background: linear-gradient(to bottom, #0e0e0e, #1a1a1a);
     color: #ddd;
@@ -225,6 +230,14 @@ ul {
 }
 
 /* Pushup: Aloldalak (Kerekített, rácsúszik) */
+.content-pushup-sub1 {
+    margin-top: -60px;
+    position: relative;
+    z-index: 5;
+    border-radius: 20px 20px 0 0;
+    padding: 80px 20px 150px 20px; /* Nagy alsó padding a footer miatt */
+}
+
 .content-pushup-sub {
     margin-top: -60px;
     position: relative;
@@ -329,8 +342,8 @@ ul {
 
 /* --- B) Szakmai Partnerek (NAGY VÍZSZINTES - Large Island) --- */
 .partner-card-horizontal {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 15px;
     padding: 30px;
     display: flex;
@@ -343,7 +356,7 @@ ul {
     background: rgba(255, 255, 255, 0.08);
     border-color: #17a7d2;
     transform: translateX(10px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
 }
 
 /* Bal oldal: Nagy Logo */
@@ -351,7 +364,6 @@ ul {
     width: 160px;
     min-width: 160px;
     height: 120px;
-    background: rgba(0,0,0,0.3);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -363,7 +375,6 @@ ul {
     max-width: 85%;
     max-height: 85%;
     object-fit: contain;
-    filter: grayscale(100%);
     transition: filter 0.3s;
 }
 
@@ -565,4 +576,13 @@ ul {
         height: auto;
         padding: 100px 0;
     }
+}
+.hatter{
+    height: 100vh;
+    background-image: url('../Img/tamogatokbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
 }
