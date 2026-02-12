@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroLink - Támogatók</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body class="hatter">
+    <section>
+       <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <div class="container-fluid" id="navbar-container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="../CanSat/Img/Logó.png" alt="AstroLink" id="logo" class="logo-kiemeles">
+            <span class="ms-3 brand-title">AstroLink</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto pe-2 gap-3">
+                    <li class="nav-item"><a class="nav-link" href="https://www.cansatverseny.hu/" target="_blank">CanSat verseny</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://sandorpeteer.github.io/CanSat2526/CDR_AstroLink" target="_blank">CDR</a></li>
+                    <li class="nav-item"><a class="nav-link" href="technologia.html">CanSatunk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Rólunk.html">Rólunk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tamogatok.html">Támogatók</a></li>
+                </ul>
+            </div>
+
+        </div>
+        </nav>
+    </section>
+
+
+    <section class="content1 content-pushup-sub1">
+        <div class="container">
+
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <h2 class="block-title">A CanSat Modell (3D Renders)</h2>
+                    
+                    <div id="techCarousel" class="carousel slide tech-slider" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#techCarousel" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="Img/CanSatkep1.jpg" class="d-block w-100" alt="Külső burkolat">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Cansatünk belülről</h5>
+                                    <p>Az esp 32 és a modulok egyedi tervezésű illesztő áramkörön kapott helyet</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Img/CanSatmodell.png" class="d-block w-100" alt="Belső szerkezet">
+                                <div class="carousel-caption d-none d-md-block" style="color: black;">
+                                    <h5>A CanSat modell egyben auto cad ban</h5>
+                                    <p>Modularitás és könnyű szerelhetőség.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Img/parachute4.png" class="d-block w-100" alt="Belső szerkezet">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Repülés teszt</h5>
+                                    <p>A teszt ejtőernyő (mivel billegett ezért új ejtőernyőnk van már)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#techCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#techCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    </div>
+            </div>
+
+            <hr class="featurette-divider my-5" style="border-color: rgba(255,255,255,0.1);">
+
+            <div class="row gy-5">
+                <div class="col-lg-7">
+                    <h3 class="block-title mb-3">3D terv animáció</h3>
+                    <div class="ratio ratio-16x9 video-container">
+                        <iframe src="Img/CanSatAssembly.mp4" title="CanSat Test" allowfullscreen></iframe>
+                    </div>
+                    <p class="mt-3">
+                        A videón látható a 3d tervünk animációja a komponensek nélkül és a benne lévő lengéscsillapító rendszer.
+                    </p>
+                </div>
+
+                <div class="col-lg-5">
+                    <h3 class="block-title mb-3">Technikai Adatok</h3>
+                    <div class="table-responsive">
+                        <table class="table table-dark table-hover tech-table">
+                            <tbody>
+                                <tr>
+                                    <td class="text-secondary">MCU (Vezérlő)</td>
+                                    <td class="fw-bold text-end">ESP32-S3-DevKitC-1 N16R8</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-secondary">IMU (Mozgás)</td>
+                                    <td class="fw-bold text-end">BNO085 + QMC5883L</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-secondary">Légkörszenzorok</td>
+                                    <td class="fw-bold text-end">BMP585 (P/T), SCD40 (CO2)</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-secondary">Szálló por mérés</td>
+                                    <td class="fw-bold text-end">SPS30 Particulate Sensor</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-secondary">Pozicionálás</td>
+                                    <td class="fw-bold text-end">HGLRC M100-Pro GPS</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-secondary">Kommunikáció</td>
+                                    <td class="fw-bold text-end">2x E22-900M30S LoRa</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-secondary">Áramellátás</td>
+                                    <td class="fw-bold text-end">2x Cellevia 18650 Li-Ion</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-secondary">Töltésvezérlés</td>
+                                    <td class="fw-bold text-end">TP4056 + Boost Module</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-secondary">Váz anyaga</td>
+                                    <td class="fw-bold text-end">3D Nyomtatott ABS</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-container">
+                <div class="row mt-5 pt-4">
+                    <div class="col-12 mb-4">
+                        <h3 class="block-title">Fejlesztési Fázisok</h3>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-item">
+                            <img src="Img/CanSatmodulokkal.png" alt="Forrasztás" class="img-fluid">
+                            <div class="gallery-overlay">CanSat a modulokkal benne</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-item">
+                            <img src="Img/3dnyomtató.png" alt="3D Nyomtatás" class="img-fluid">
+                            <div class="gallery-overlay">3D Nyomtatás</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="gallery-item">
+                            <img src="Img/CanSatunk&antennáink.png" alt="Tesztelés" class="img-fluid">
+                            <div class="gallery-overlay">CanSatunk és QFh antennák (Quadrifilar Helix)</div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+  <footer class="modern-footer footer-pushup">
+    <div class="container">
+      <div class="row gy-4 gx-lg-5">
+        
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 text-center">
+          <a href="#" class="footer-brand d-flex align-items-center justify-content-center mb-3">
+            <img src="../CanSat/Img/Logó.png" alt="Logo" class="footer-logo me-3">
+            <span class="text-white fw-bold fs-3">AstroLink</span>
+          </a>
+          <p class="">
+            A Kandó Kálmán Informatikai Technikum hivatalos CanSat csapata.<br> 
+            A jövő mérnökei, akik a határokat feszegetik.
+          </p>
+          <div class="social-icons mt-4 justify-content-center">
+            <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="social-btn"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-center">
+          <h5 class="text-white mb-4 footer-heading">Navigáció</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="https://sandorpeteer.github.io/CanSat2526/CDR_AstroLink" target="_blank">CDR</a></li>
+            <li><a href="Rólunk.html">Rólunk</a></li>
+            <li><a href="technologia.html">CanSatunk</a></li>
+            <li><a href="tamogatok.html">Támogatók</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center">
+          <h5 class="text-white mb-4 footer-heading">Kapcsolat</h5>
+          <ul class="list-unstyled contact-info">
+            <li class="mb-3 d-flex justify-content-center">
+              <i class="fa-solid fa-location-dot me-2 text-blue"></i> 
+              3525 Miskolc Palóczy László u. 3.
+            </li>
+            <li class="mb-3 d-flex justify-content-center">
+              <i class="fa-solid fa-phone me-2 text-blue"></i> 
+              +36 30 123 4567
+            </li>
+            <li class="mb-3 d-flex justify-content-center">
+              <i class="fa-solid fa-at me-2 text-blue"></i> 
+              info@astrolink.hu
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom mt-5 pt-4 border-top border-secondary">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center mb-2 mb-md-0">
+            <p class="mb-0 small">&copy; 2025 AstroLink Team. Minden jog fenntartva.</p>
+          </div>
+          <div class="col-md-6 text-center">
+            <p class="mb-0 small">Designed by AstroLink Devs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
