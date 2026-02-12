@@ -1,177 +1,236 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AstroLink Főoldal</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="../CanSat/Css/rolunk.css">
-</head>
-<body>
-<section class="hero1">
-  <!-- Navigáció -->
-  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
-    <div class="container-fluid" id="navbar-container">
-
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="../CanSat/Img/Logó.png" alt="AstroLink" id="logo" class="logo-kiemeles">
-        <span class="ms-3 brand-title">AstroLink</span>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav ms-auto pe-2 gap-3">
-          <li class="nav-item"><a class="nav-link" href="https://www.cansatverseny.hu/" target="_blank">CanSat verseny</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://sandorpeteer.github.io/CanSat2526/CDR_AstroLink" target="_blank">CDR</a></li>
-          <li class="nav-item"><a class="nav-link" href="technologia.html">CanSatunk</a></li>
-          <li class="nav-item"><a class="nav-link" href="Rólunk.html">Rólunk</a></li>
-          <li class="nav-item"><a class="nav-link" href="tamogatok.html">Támogatók</a></li>
-        </ul>
-      </div>
-
-    </div>
-  </nav>
-
-  <div class="container my-5 py-5">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroLink - Rólunk</title>
     
-    <div class="text-center mb-5">
-        <h1 class="display-3 fw-bold ">Ismerd meg a csapatot</h1> <p class="lead fs-4">A Kandó Kálmán Informatikai Technikum CanSat egysége</p>
-    </div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body class="hatter">
 
-    <div class="row g-5 justify-content-center">
+    <section>
+       <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <div class="container-fluid" id="navbar-container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="../CanSat/Img/Logó.png" alt="AstroLink" id="logo" class="logo-kiemeles">
+                <span class="ms-3 brand-title">AstroLink</span>
+            </a>
 
-        <div class="col-12 col-lg-6"> <div class="card team-card h-100 text-center p-4"> <div class="card-body">
-                    <div class="img-container mb-4">
-                        <img src="../CanSat/Img/rólunkkep1.png" alt="Csapattag 1" class="profile-img">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto pe-2 gap-3">
+                    <li class="nav-item"><a class="nav-link" href="https://www.cansatverseny.hu/" target="_blank">CanSat verseny</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://sandorpeteer.github.io/CanSat2526/CDR_AstroLink" target="_blank">CDR</a></li>
+                    <li class="nav-item"><a class="nav-link" href="technologia.html">CanSatunk</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Rólunk.html">Rólunk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tamogatok.html">Támogatók</a></li>
+                </ul>
+            </div>
+
+        </div>
+       </nav>
+    </section>
+
+    <section class="team-content footer-space-fix pb-5 pt-5">
+        <div class="container mt-4">
+            
+            <div class="text-center mb-5">
+                <h1 class="display-3 fw-bold text-white">Ismerd meg a csapatot</h1>
+                <p class="lead fs-4 text-white-50">A Kandó Kálmán Informatikai Technikum CanSat egysége</p>
+                <div class="title-underline mx-auto mt-3"></div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card team-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <img src="Img/rólunkkep1.png" alt="Szászfai László" class="profile-img mb-3">
+                            <h3 class="card-title text-white mt-2">Szászfai László</h3>
+                            <p class="role-text text-info fw-bold">Software Developer</p>
+                            <p class="card-text text-light small">
+                                A firmware lelke. Embedded C/C++ fejlesztés ESP32-S3 platformon, FreeRTOS környezetben.
+                            </p>
+                        </div>
                     </div>
-                    <h3 class="card-title text-white mb-3">Vezetéknév Keresztnév</h3>
-                    <p class="role-text fs-5">Csapatkapitány</p> <p class="card-text text-light fs-6">
-                        A projekt koordinálása és a kapcsolattartás a szervezőkkel. 
-                        Ez a kártya most már sokkal nagyobb, így hosszabb szöveg is kényelmesen elfér rajta.
-                    </p>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card team-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <img src="Img/rólunkkep1.png" alt="Németh Imre" class="profile-img mb-3">
+                            <h3 class="card-title text-white mt-2">Németh Imre</h3>
+                            <p class="role-text text-info fw-bold">Recovery Engineer</p>
+                            <p class="card-text text-light small">
+                                A biztonságos földet érés felelőse. Az ejtőernyő tervezése és varrása a megfelelő süllyedési sebességért.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card team-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <img src="Img/rólunkkep1.png" alt="Nagy Marcell" class="profile-img mb-3">
+                            <h3 class="card-title text-white mt-2">Nagy Marcell</h3>
+                            <p class="role-text text-info fw-bold">Mechanical Designer</p>
+                            <p class="card-text text-light small">
+                                A váz megalkotója. 3D modellezés és a szerkezet optimalizálása ABS nyomtatáshoz.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card team-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <img src="Img/rólunkkep1.png" alt="Fodor Levente Gábor" class="profile-img mb-3">
+                            <h3 class="card-title text-white mt-2">Fodor Levente Gábor</h3>
+                            <p class="role-text text-info fw-bold">Communications Engineer</p>
+                            <p class="card-text text-light small">
+                                A kapcsolat fenntartója. A LoRa rádiókommunikáció és az adatátvitel felügyelete.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card team-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <img src="Img/rólunkkep1.png" alt="Szilágyi Zsombor" class="profile-img mb-3">
+                            <h3 class="card-title text-white mt-2">Szilágyi Zsombor</h3>
+                            <p class="role-text text-info fw-bold">Electronics Engineer</p>
+                            <p class="card-text text-light small">
+                                A hardver szíve. PCB tervezés, forrasztás és a szenzorok fizikai integrációja.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card team-card h-100 text-center p-4">
+                        <div class="card-body">
+                            <img src="Img/rólunkkep1.png" alt="Szilágyi Bálint" class="profile-img mb-3">
+                            <h3 class="card-title text-white mt-2">Szilágyi Bálint</h3>
+                            <p class="role-text text-info fw-bold">Web Developer</p>
+                            <p class="card-text text-light small">
+                                Az adatok megjelenítője. A földi állomás (Ground Station) vizualizációs felületének fejlesztője.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mt-5 mb-4">
+                <div class="col-12 text-center">
+                    <h2 class="text-white">Mentorok</h2>
+                    <div class="title-underline mx-auto mt-3 mb-4" style="background-color: #ffc107;"></div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-12 col-lg-6">
-            <div class="card team-card h-100 text-center p-4">
-                <div class="card-body">
-                    <div class="img-container mb-4">
-                        <img src="../CanSat/Img/rólunkkep1.png" alt="Csapattag 2" class="profile-img">
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6">
+                    <div class="card team-card h-100 text-center p-4 border-warning">
+                        <div class="card-body">
+                            <img src="Img/splogó.png" alt="Sándor Péter" class="profile-img mb-3 mentor-img">
+                            <h3 class="card-title text-white mt-2">Sándor Péter</h3>
+                            <p class="role-text text-warning fw-bold">Hardware & Software Mentor</p>
+                            <p class="card-text text-light small">
+                                Szakmai iránymutatás a hardveres tervezésben és az erőforrások biztosítása.
+                            </p>
+                        </div>
                     </div>
-                    <h3 class="card-title text-white mb-3">Vezetéknév Keresztnév</h3>
-                    <p class="role-text fs-5">Szoftverfejlesztő</p>
-                    <p class="card-text text-light fs-6">
-                        A szenzorok adatainak gyűjtése és a kommunikációs modul programozása.
-                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="card team-card h-100 text-center p-4 border-warning">
+                        <div class="card-body">
+                            <img src="Img/rólunkkep1.png" alt="Sike László" class="profile-img mb-3 mentor-img">
+                            <h3 class="card-title text-white mt-2">Sike László</h3>
+                            <p class="role-text text-warning fw-bold">Documentation Mentor</p>
+                            <p class="card-text text-light small">
+                                A dokumentációk ellenőrzése, határidők menedzselése és adminisztráció.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="col-12 col-lg-6">
-            <div class="card team-card h-100 text-center p-4">
-                <div class="card-body">
-                    <div class="img-container mb-4">
-                        <img src="../CanSat/Img/rólunkkep1.png" alt="Csapattag 3" class="profile-img">
-                    </div>
-                    <h3 class="card-title text-white mb-3">Vezetéknév Keresztnév</h3>
-                    <p class="role-text fs-5">Hardver Mérnök</p>
-                    <p class="card-text text-light fs-6">
-                        Az áramkörök tervezése, forrasztás és az elektronika összeállítása.
-                    </p>
-                </div>
+        </div>
+    </section>
+
+
+    <footer class="modern-footer footer-pushup">
+        <div class="container">
+          <div class="row gy-4 gx-lg-5">
+            
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 text-center">
+              <a href="#" class="footer-brand d-flex align-items-center justify-content-center mb-3">
+                <img src="../CanSat/Img/Logó.png" alt="Logo" class="footer-logo me-3">
+                <span class="text-white fw-bold fs-3">AstroLink</span>
+              </a>
+              <p class="">
+                A Kandó Kálmán Informatikai Technikum hivatalos CanSat csapata.<br> 
+                A jövő mérnökei, akik a határokat feszegetik.
+              </p>
+              <div class="social-icons mt-4 justify-content-center">
+                <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-btn"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="social-btn"><i class="fa-solid fa-envelope"></i></a>
+              </div>
             </div>
-        </div>
-
-        <div class="col-12 col-lg-6">
-            <div class="card team-card h-100 text-center p-4">
-                <div class="card-body">
-                    <div class="img-container mb-4">
-                        <img src="../CanSat/Img/rólunkkep1.png" alt="Csapattag 4" class="profile-img">
-                    </div>
-                    <h3 class="card-title text-white mb-3">Vezetéknév Keresztnév</h3>
-                    <p class="role-text fs-5">3D Tervező</p>
-                    <p class="card-text text-light fs-6">
-                        A műhold testének 3D modellezése és az ejtőernyő mechanikája.
-                    </p>
-                </div>
+    
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-center">
+              <h5 class="text-white mb-4 footer-heading">Navigáció</h5>
+              <ul class="list-unstyled footer-links">
+                <li><a href="https://sandorpeteer.github.io/CanSat2526/CDR_AstroLink" target="_blank">CDR</a></li>
+                <li><a href="Rólunk.html">Rólunk</a></li>
+                <li><a href="technologia.html">CanSatunk</a></li>
+                <li><a href="tamogatok.html">Támogatók</a></li>
+              </ul>
             </div>
-        </div>
-
-    </div>
-</div>
-
-
-<!-- Lábléc -->
-  <footer class="modern-footer footer-pushup">
-    <div class="container">
-      <div class="row gy-4 gx-lg-5">
-        
-        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0 text-center">
-          <a href="#" class="footer-brand d-flex align-items-center justify-content-center mb-3">
-            <img src="../CanSat/Img/Logó.png" alt="Logo" class="footer-logo me-3">
-            <span class="text-white fw-bold fs-3">AstroLink</span>
-          </a>
-          <p class="">
-            A Kandó Kálmán Informatikai Technikum hivatalos CanSat csapata.<br> 
-            A jövő mérnökei, akik a határokat feszegetik.
-          </p>
-          <div class="social-icons mt-4 justify-content-center">
-            <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-btn"><i class="fa-brands fa-github"></i></a>
-            <a href="#" class="social-btn"><i class="fa-solid fa-envelope"></i></a>
+    
+            <div class="col-lg-4 col-md-6 text-center">
+              <h5 class="text-white mb-4 footer-heading">Kapcsolat</h5>
+              <ul class="list-unstyled contact-info">
+                <li class="mb-3 d-flex justify-content-center">
+                  <i class="fa-solid fa-location-dot me-2 text-blue"></i> 
+                  3525 Miskolc Palóczy László u. 3.
+                </li>
+                <li class="mb-3 d-flex justify-content-center">
+                  <i class="fa-solid fa-phone me-2 text-blue"></i> 
+                  +36 30 123 4567
+                </li>
+                <li class="mb-3 d-flex justify-content-center">
+                  <i class="fa-solid fa-at me-2 text-blue"></i> 
+                  info@astrolink.hu
+                </li>
+              </ul>
+            </div>
+    
+          </div>
+    
+          <div class="footer-bottom mt-5 pt-4 border-top border-secondary">
+            <div class="row align-items-center">
+              <div class="col-md-6 text-center mb-2 mb-md-0">
+                <p class="mb-0 small">&copy; 2025 AstroLink Team. Minden jog fenntartva.</p>
+              </div>
+              <div class="col-md-6 text-center">
+                <p class="mb-0 small">Designed by AstroLink Devs</p>
+              </div>
+            </div>
           </div>
         </div>
+      </footer>
 
-        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0 text-center">
-          <h5 class="text-white mb-4 footer-heading">Navigáció</h5>
-          <ul class="list-unstyled footer-links">
-            <li><a href="https://sandorpeteer.github.io/CanSat2526/CDR_AstroLink" target="_blank">CDR</a></li>
-            <li><a href="Rólunk.html">Rólunk</a></li>
-            <li><a href="technologia.html">CanSatunk</a></li>
-            <li><a href="tamogatok.html">Támogatók</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-4 col-md-6 text-center">
-          <h5 class="text-white mb-4 footer-heading">Kapcsolat</h5>
-          <ul class="list-unstyled contact-info">
-            <li class="mb-3 d-flex justify-content-center">
-              <i class="fa-solid fa-location-dot me-2 text-blue"></i> 
-              3525 Miskolc Palóczy László u. 3.
-            </li>
-            <li class="mb-3 d-flex justify-content-center">
-              <i class="fa-solid fa-phone me-2 text-blue"></i> 
-              +36 30 123 4567
-            </li>
-            <li class="mb-3 d-flex justify-content-center">
-              <i class="fa-solid fa-at me-2 text-blue"></i> 
-              info@astrolink.hu
-            </li>
-          </ul>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom mt-5 pt-4 border-top border-secondary">
-        <div class="row align-items-center">
-          <div class="col-md-6 text-center mb-2 mb-md-0">
-            <p class="mb-0 small">&copy; 2025 AstroLink Team. Minden jog fenntartva.</p>
-          </div>
-          <div class="col-md-6 text-center">
-            <p class="mb-0 small">Designed by AstroLink Devs</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-

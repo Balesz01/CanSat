@@ -663,3 +663,101 @@ ul {
         height: 400px; /* Mobilon kicsit kisebb, de még mindig álló */
     }
 }
+
+/* --- RÓLUNK OLDAL SPECIFIKUS ELEMEK --- */
+
+/* Fő tartalom igazítása */
+.team-hero {
+    margin-top: 60px; /* Hely a navbar alatt */
+}
+
+/* Kártya stílus (Glassmorphism) */
+.team-card {
+    background: rgba(20, 20, 35, 0.6); /* Átlátszó sötét */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(23, 167, 210, 0.2); /* Halvány kék keret */
+    border-radius: 15px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    border-color: #0dcaf0; /* AstroLink Kék */
+    box-shadow: 0 10px 30px rgba(13, 202, 240, 0.2);
+}
+
+/* Profilkép */
+.profile-img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #0dcaf0;
+    padding: 3px;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .profile-img {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(13, 202, 240, 0.5);
+}
+
+/* Szövegek */
+.role-text {
+    color: #0dcaf0; /* Ciánkék */
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+/* Mentor kártyák különlegessége */
+.mentor-card {
+    border-color: rgba(255, 193, 7, 0.2); /* Halvány sárga keret */
+}
+
+.mentor-card:hover {
+    border-color: #ffc107;
+    box-shadow: 0 10px 30px rgba(255, 193, 7, 0.2);
+}
+
+.mentor-img {
+    border-color: #ffc107 !important;
+}
+
+.team-card:hover .mentor-img {
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.5);
+}
+
+/* Cím aláhúzás */
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background-color: #0dcaf0;
+    border-radius: 2px;
+}
+
+/* ========================================= */
+/* 9. EGYEDI JAVÍTÁSOK (Hogy ne rontsa el a többi oldalt) */
+/* ========================================= */
+
+/* Ezt az osztályt csak a Rólunk oldalon a Mentorok szekcióhoz adjuk hozzá */
+.footer-space-fix {
+    padding-bottom: 250px !important; /* Nagyobb hely az alján */
+    position: relative; 
+    z-index: 2; /* Hogy biztosan a háttér előtt, de a footer alatt/felett kezeljük */
+}
+
+/* Ha mobilon túl nagy lenne a lyuk, itt csökkentheted */
+@media (max-width: 768px) {
+    .footer-space-fix {
+        padding-bottom: 100px !important;
+    }
+}
