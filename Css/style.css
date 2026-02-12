@@ -168,13 +168,28 @@ ul {
 
 /* --- Köztes Hero (Forrasztós kép szeparátor) --- */
 .hero2 {
-    position: relative;
-    height: 60vh;
-    min-height: 400px;
+    position: relative !important; /* KULCSFONTOSSÁGÚ: Ez tartja a helyét a sorban */
+    width: 100%;
+    
+    /* Magasság beállítások mobilon és gépen */
+    height: 80vh; 
+    min-height: 600px !important; /* Ez oldja meg, hogy mobilon ne legyen csík */
+    
+    /* Háttérkép beállításai */
     background-image: url('../Img/Forraszós_kép1.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed !important; /* Ez csinálja a mozgást (parallax) */
+    
+    /* Tartalom igazítása középre */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 0;
+    margin-top: 0; /* Biztosítjuk, hogy ne legyen negatív margója */
+    z-index: 1;
 }
 
 .hero2-overlay {
@@ -759,5 +774,183 @@ ul {
 @media (max-width: 768px) {
     .footer-space-fix {
         padding-bottom: 100px !important;
+    }
+}
+/* --- NAVBAR MOBIL JAVÍTÁS (Full Blur & Overlay) --- */
+
+@media (max-width: 991px) {
+
+    /* 1. A FELSŐ SÁV (Ahol a logó és a hamburger gomb van) */
+    .custom-navbar {
+        /* Átlátszó fekete + Blur */
+        background-color: rgba(14, 14, 14, 0.85) !important; 
+        backdrop-filter: blur(15px);         /* Ez csinálja a homályosítást */
+        -webkit-backdrop-filter: blur(15px); /* Safari támogatás */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Halvány vonal az alján */
+    }
+
+    /* 2. A LENYÍLÓ MENÜ (Ami eddig letolta a tartalmat) */
+    .navbar-collapse {
+        /* Kiemeljük a dokumentum folyamából, hogy RÁNYÍLJON a tartalomra */
+        position: absolute;
+        top: 100%; /* Pontosan a sáv aljához igazodik */
+        left: 0;
+        width: 100%;
+        
+        /* Ugyanaz a háttér és blur, mint a fenti sávnak */
+        background-color: rgba(14, 14, 14, 0.85) !important;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        
+        /* Kis árnyék, hogy elváljon a háttértől */
+        box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        
+        /* Fontos: A legmagasabb rétegrend */
+        z-index: 9999;
+        
+        padding-bottom: 20px;
+    }
+    
+    /* 3. Menüpontok igazítása */
+    .navbar-nav {
+        text-align: center;
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    /* A dobozokat kicsit jobban elválasztjuk */
+    .spec-box {
+        margin-bottom: 25px !important; 
+        padding: 0 2px; /* Kicsi hely, hogy kiférjen a szöveg */
+    }
+
+    /* A címsorok (Célunk, Mérések...) */
+    .spec-box h4 {
+        font-size: 1.3rem;      /* Növeltük: 1.1 -> 1.3 (jól olvasható cím) */
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        border-bottom: 3px solid #00d2ff; /* Vastagabb vonal */
+        display: inline-block;
+        padding-bottom: 4px;
+        letter-spacing: 1px; /* Kis ritkítás, hogy szellősebb legyen */
+    }
+
+    /* A felsorolás elemei (Szoftverfejlesztés, stb.) */
+    .spec-box ul li {
+        font-size: 1rem;     /* VISSZAADTUK AZ EREDETI MÉRETET (kb 16px) */
+        color: #ddd;         /* Kicsit világosabb szürke a jobb kontrasztért */
+        margin-bottom: 6px;  /* Nagyobb térköz a sorok között */
+        line-height: 1.3;    /* Hogy ha sortörés van, ne folyjon össze */
+        font-weight: 500;    /* Kicsit vastagabb betű */
+    }
+}
+
+@media (max-width: 768px) {
+    
+    /* 1. A CAROUSEL MAGASSÁGÁNAK KORLÁTOZÁSA */
+    /* Beállítjuk, hogy mobilon fix magassága legyen, ne lógjon ki a világból */
+    #carouselExampleCaptions, 
+    .carousel-inner, 
+    .carousel-item {
+        height: 60vh !important; /* A képernyő 60%-a */
+        min-height: 400px;       /* Vagy minimum 400px */
+    }
+
+    /* 2. A KÉP MÉRETEZÉSE */
+    /* A kép töltse ki a dobozt, de ne torzuljon (a széleiből vág le) */
+    .carousel-item img {
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: cover !important; /* Ez a kulcs: nem nyújtja, hanem vágja */
+        object-position: center;
+    }
+
+    /* 3. A SZÖVEG MEGJELENÍTÉSE */
+    /* Mobilon is látható legyen, fekete háttérrel az olvashatóságért */
+    .carousel-caption {
+        display: block !important; /* Biztosan megjelenjen */
+        bottom: 20px !important;   /* Az aljától kicsit feljebb */
+        padding: 15px;
+        
+        /* Fekete áttetsző doboz a szöveg mögé, hogy olvasható legyen */
+        background: rgba(0, 0, 0, 0.7); 
+        border-radius: 10px;
+        
+        /* Szélesség igazítása */
+        left: 5%;
+        right: 5%;
+        width: 90%;
+    }
+
+    /* Kisebb betűméret, hogy kiférjen */
+    .carousel-caption h5 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #fff;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+        color: #ddd;
+    }
+}
+
+/* ========================================= */
+/* FINOMHANGOLT TÁBLÁZAT - AZ ARANY KÖZÉPÚT  */
+/* ========================================= */
+
+.tech-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.12); /* Kicsit visszafogottabb háttér */
+}
+
+.tech-table td {
+    padding: 12px 15px; /* Normál, kényelmes térköz */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    vertical-align: middle;
+}
+
+/* Bal oldali oszlop (Címkék) - FINOMÍTVA */
+.tech-table td:first-child {
+    font-weight: 700;
+    font-size: 1.1rem;      /* 1.4 helyett 1.1 - pont kellemes méret */
+    color: #1b78dc;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Jobb oldali oszlop (Adatok) */
+.tech-table td:last-child {
+    text-align: left;
+    font-size: 1rem;        /* Alapméret, hogy ne legyen zsúfolt */
+    font-weight: 400;
+    color: #efefef;
+}
+
+/* Sorok váltakozó színezése */
+.tech-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Mobilos nézet finomítása */
+@media (max-width: 600px) {
+    .tech-table td:first-child {
+        font-size: 0.95rem; /* Mobilon picit kisebb, hogy ne törjön szét */
+        padding: 10px;
+    }
+    .tech-table td:last-child {
+        font-size: 0.85rem;
     }
 }
