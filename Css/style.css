@@ -357,7 +357,7 @@ ul {
 
 /* --- B) Szakmai Partnerek (NAGY VÍZSZINTES - Large Island) --- */
 .partner-card-horizontal {
-    background: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 15px;
     padding: 30px;
@@ -910,12 +910,12 @@ ul {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    background-color: rgba(255, 255, 255, 0.12); /* Kicsit visszafogottabb háttér */
+    background-color: rgba(255, 255, 255, 0.267); /* Kicsit visszafogottabb háttér */
 }
 
 .tech-table td {
     padding: 12px 15px; /* Normál, kényelmes térköz */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.217);
     color: #fff;
     vertical-align: middle;
 }
@@ -926,7 +926,7 @@ ul {
     font-size: 1.1rem;      /* 1.4 helyett 1.1 - pont kellemes méret */
     color: #1b78dc;
     width: 40%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.483);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -941,7 +941,7 @@ ul {
 
 /* Sorok váltakozó színezése */
 .tech-table tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.169);
 }
 
 /* Mobilos nézet finomítása */
